@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title><%= @title %></title>
+</head>
+<body>
+<h1><%= @title %></h1>
+<p><%= @subtitle %></p>
+<form method="post" action="/">
+  <% @num_of_users.times do |i| %>
+  <input type = "checkbox" name="checked[]" checked="checked" value=<%= @users[i] %>>
+      <img src=<%= @icons[i] %>>
+      <%= @users[i] %>
+      <br>
+  <% end %>
+  <br>
+  最少人数:<input type="text" name="min_member" size="1" style="text-align:center" value="2">
+  <input type="submit" value="Send">
+</form>
+</body>
+</html>

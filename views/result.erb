@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title><%= @title %></title>
+</head>
+<body>
+<h1><%= @title %></h1>
+<p><%= @subtitle %></p>
+
+<% id = "A"; index=0 %>
+<% @team.size.times do |i|%>
+    <FIELDSET>
+      <LEGEND>Team:<%= id %></LEGEND>
+      <% @team[i].size.times do |j|%>
+          <img src=<%= @icons[@team[i][j]] %>> <%= @team[i][j] %>
+      <% end %>
+    </FIELDSET>
+    <% id.succ! %>
+    <br>
+<% end %>
+
+
+</body>
+</html>
